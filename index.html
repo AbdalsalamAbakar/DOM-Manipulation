@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        margin: 4px;
+      }
+      #myBox{
+        background-color: lightcoral;
+        width: 300px;
+        height: 300px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+
+      }
+      #mybutton{
+        padding: 10px 20px;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      #Box{
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+      }
+    </style>
+</head>
+<body>
+  <form id="myForm">
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Username" id="username"/>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Password" id="password"/>
+    
+    <button onclick="login(event)">Submit</button>
+  </form><br><br><br>
+  <h1>Sign Up</h1>
+    <form id="signup">
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Username" id="fullname"/>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Password" id="passwd"/>
+    
+    <button onclick="signup(event)">Submit</button>
+  </form><br><br>
+
+  <button id="myButton">click to add numbers</button><br><br>
+  <div id="myBox">
+    Click Me
+  </div><br><br>
+  <button id="mybutton">Click Me</button>
+  
+  <div id="Box">
+This is another Div
+  </div>
+   <script src="./index.js"></script>
+</body>
+</html>
