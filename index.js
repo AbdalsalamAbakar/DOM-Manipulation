@@ -166,4 +166,15 @@ document.addEventListener("keydown", event => {
     }
 })
 
-
+//adding a div element to our html page + asigning event listener to it
+const newDiv = document.createElement("div");
+newDiv.style.width = "200px";
+newDiv.style.height = "200px";
+newDiv.style.backgroundColor = "lightblue";
+newDiv.textContent = "this is a newly created div"
+newDiv.addEventListener("click", e =>{
+   if(e.target.matches("div")){
+ console.log("hi");
+   }
+})
+document.body.append(newDiv);
