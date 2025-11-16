@@ -1,0 +1,129 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(./image/image.png) no-repeat center/ cover;
+}
+.container{
+    width: 550px;
+    height: 450px;
+}
+.header{
+    font-size: 1.5rem;
+    border: solid 2px #fff;
+    color: #fff;
+    background-color: rgb(66, 61, 61);
+    padding: 5px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.main-content{
+    width: 100%;
+    height: 300px;
+    padding: ;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 50px 40px;
+    box-shadow: 0 0 10px;
+
+}
+
+.main-content .textarea{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.main-content .person{
+    font-size: 1.6rem;
+    color: red;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.button-area button{
+    background-color: rgb(70, 58, 58);
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    margin-top: 20px ;
+    border-radius: 5px;
+
+
+}
+.button-area button:hover {
+    background-color: lightblue;
+} */
+
+/* css code for project2 : modal  */
+body{
+    background: url(./image/image\ copy.png) no-repeat center/ cover;
+    height: 100vh;
+    position: relative;
+}
+#open-btn{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 350px;
+    height: 80px;
+    font-size: 2rem;
+    background: transparent;
+    color: blue;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 3px blue;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#open-btn:hover{
+    background : #fff;
+    color: black;
+}
+#modal{
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-name: animatemodal;
+    animation-duration: .4s;
+}
+
+#close-btn{
+    font-size: 3rem;
+}
+#close-btn:hover{
+    cursor: pointer;
+    font-size: 3rem;
+    color: red;
+}
+#modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+}

@@ -1,60 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      body{
-        margin: 4px;
-      }
-      #myBox{
-        background-color: lightcoral;
-        width: 300px;
-        height: 300px;
-        color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        font-weight: bold;
 
-      }
-      #mybutton{
-        padding: 10px 20px;
-        font-size: 3rem;
-        cursor: pointer;
-      }
-      #Box{
-        background-color: brown;
-        width: 200px;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        position: relative;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 4px;
+    }
+
+    #myBox {
+      background-color: lightcoral;
+      width: 300px;
+      height: 300px;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      font-weight: bold;
+
+    }
+
+    #mybutton {
+      padding: 10px 20px;
+      font-size: 3rem;
+      cursor: pointer;
+    }
+
+    #Box {
+      background-color: brown;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .hidden-content {
+      display: none;
+    }
+
+    .hidden-content.is-revealed {
+      display: block;
+    }
+
+    .div2 {
+      background-color: gray;
+      height: 300px;
+      width: 400px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .div1 {
+      background-color: rgb(100, 71, 71);
+      height: 200px;
+      width: 250px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .button {
+      font-size: 30px;
+      margin: auto;
+      width: 80%;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: solid 3px #fff;
+      background: none;
+      color: #fff;
+      display: block;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-  <form id="myForm">
+  <!-- <form id="myForm">
     <label for="username">Username:</label>
-    <input type="text" name="username" placeholder="Username" id="username"/>
+    <input type="text" name="username" placeholder="Username" id="username" />
 
     <label for="password">Password:</label>
-    <input type="password" name="password" placeholder="Password" id="password"/>
-    
+    <input type="password" name="password" placeholder="Password" id="password" />
+
     <button onclick="login(event)">Submit</button>
   </form><br><br><br>
   <h1>Sign Up</h1>
-    <form id="signup">
+  <form id="signup">
     <label for="username">Username:</label>
-    <input type="text" name="username" placeholder="Username" id="fullname"/>
+    <input type="text" name="username" placeholder="Username" id="fullname" />
 
     <label for="password">Password:</label>
-    <input type="password" name="password" placeholder="Password" id="passwd"/>
-    
+    <input type="password" name="password" placeholder="Password" id="passwd" />
+
     <button onclick="signup(event)">Submit</button>
   </form><br><br>
 
@@ -63,10 +121,103 @@
     Click Me
   </div><br><br>
   <button id="mybutton">Click Me</button>
-  
+
   <div id="Box">
-This is another Div
+    This is another Div
   </div>
-   <script src="./index.js"></script>
+
+  <div class="container">
+    <h1 id="heading">Favorite Movie Franchise</h1>
+    <ul id="list-items">
+      <li class="items">The Matrics</li>
+      <li class="items">Star Wars</li>
+      <li class="items">Harry Potter</li>
+      <li class="items">Lord of the Rings</li>
+      <li class="items">Marvel</li>
+    </ul>
+  </div>
+
+  <div id="container">
+    <div class="boxes box-1">
+      <h1 id="heading">Example 1</h1>
+      <button onclick="alert('I love JavaScript')">Enter</button>
+    </div>
+    <div class="boxes box-2">
+      <h1 id="heading">Example 2</h1>
+      <button class="btn-2">Enter</button>
+    </div>
+    <div class="boxes box-3">
+      <h1 id="heading">Example 3</h1>
+      <button>Enter</button>
+    </div>
+  </div>
+
+  <h1 id="main-heading">Event listeners</h1>
+
+  <div class="container">
+    <button class="reveal-btn boxes">Reveal More</button>
+    <div class="hidden-content">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Ab, cupiditate? Hic cum odio possimus unde, <br> nobis
+      repellendus? Ullam consequatur eaque ducimus,<br> explicabo placeat dolores accusantium, possimus temporibus, <br> aperiam
+      labore quae.
+    </div>
+  </div>
+
+  <div class="div2">
+    2
+    <div class="div1">
+      1
+     
+      <a href="#" class="button">Click</a>
+    </div>
+  </div>
+
+  <ul id="sports">
+    <li id="football">football</li>
+    <li id="basketball">basketball</li>
+    <li id="boxing">boxing</li>
+    <li id="tennis">tennis</li>
+    <li id="golf">golf</li>
+  </ul> -->
+  <!-- <div class="container">
+    <div class="header">
+      <h2>JavaScript Quote Generator</h2>
+    </div>
+    <div class="main-content">
+      <div class="textarea">
+        <span class="qoute">
+          "I do the very best I know how - the 
+          best I can; and I mean to keep on doing
+          so until the end."
+        </span>
+      </div>
+      <div class="person">
+        Abraham LincoIn
+      </div>
+      <div class="button-area">
+        <button id="new-qoute">New Qoute</button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Project2: Modal -->
+  <!-- Modal Open Button -->
+
+  <button id="open-btn">
+    <p>Where's our Modal</p>
+  </button>
+  <!-- Modal & Modal Background -->
+
+  <div id="modal-container">
+    <div id="modal">
+      <p>Here I am </p>
+      <div id="close-btn">&times;</div>
+    </div>
+
+  </div>
+
+
+  <script src="./index.js"></script>
 </body>
+
 </html>
